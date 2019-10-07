@@ -58,8 +58,10 @@ class PostController extends Controller
 
     public function postsCategory($id){
 
-      dd($id);
-      return view('page.postsForCategory');
+      $categories = Category::all();
+      $category = Category::findOrFail($id);
+      $type_view = $category -> name;
+      return view ('page.postCategory_show', compact('type_view', 'category', 'categories'));
     }
 
     /**

@@ -1,8 +1,10 @@
 @extends('layout.layout_index')
 @section('content')
 
+
   <div class="wrapper-box">
-    @foreach ($posts as $post)
+
+    @foreach ($category -> posts as $post)
       <div class="box">
         <span>Titolo Post:</span>
         <p>{{ $post -> title }}</p>

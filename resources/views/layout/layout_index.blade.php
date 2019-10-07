@@ -20,6 +20,20 @@
 
 
       <div class="container">
+
+        <aside class="">
+          <a href="#">NEW POST</a>
+          <nav>
+            <span>Categories Post</span>
+            <ul>
+              @foreach ($categories as $categoryy)
+                <li><a href="{{ route('showPostOfCategory', $categoryy -> id) }}">{{ $categoryy -> name }}</a></li>
+              @endforeach
+            </ul>
+          </nav>
+
+        </aside>
+
         @yield('content')
       </div>
 
