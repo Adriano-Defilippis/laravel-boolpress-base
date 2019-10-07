@@ -1,0 +1,116 @@
+//
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: Nunito;
+
+}
+
+
+header{
+  background-color: black;
+  color: white;
+
+  padding: 20px;
+  text-align: center;
+}
+
+.container{
+  display: flex;
+
+  width: 100%;
+  height: calc(100% - 115px);
+
+  padding: 10px;
+
+  &::after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .wrapper-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 70%;
+
+    margin: 0 auto;
+
+    &::after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .box{
+
+      font-size: 1.2em;
+
+      width: calc(100% / 3 - 20px);
+      padding: 10px;
+
+      margin-bottom: 10px;
+
+      color: white;
+      background-color: lightblue;
+
+      border-radius: 10px;
+
+      position: relative;
+
+      div.actions{
+        float: right;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+
+        a{
+
+          background-color: white;
+          color: grey;
+          font-weight: bold;
+
+          text-decoration: none;
+          padding: 5px;
+
+          border-radius: 10px;
+          &:hover{
+            color: grey;
+          }
+        }
+      }
+
+      span{
+        font-weight: bolder;
+      }
+    }
+  }
+}
+
+form{
+  width: 80%;
+  height: calc(100vh - 135px);
+  margin: 0 auto;
+
+  label{
+    width: 100%;
+  }
+  input{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+footer{
+  background-color: black;
+  color: white;
+
+  padding: 10px;
+  text-align: center;
+
+}
