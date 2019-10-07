@@ -5,8 +5,10 @@
   box-sizing: border-box;
 
   font-family: Nunito;
-
+  list-style: none;
 }
+
+
 
 
 header{
@@ -21,7 +23,7 @@ header{
   display: flex;
 
   width: 100%;
-  height: calc(100% - 115px);
+  min-height: calc(100vh - 135px);
 
   padding: 10px;
 
@@ -29,6 +31,34 @@ header{
     content: "";
     display: table;
     clear: both;
+  }
+
+  aside{
+
+    a{
+      text-decoration: none;
+      color: grey;
+
+      &:hover{
+        color: lightblue;
+      }
+    }
+
+    nav{
+
+      margin: 20px 0;
+      ul{
+
+        li{
+          margin: 10px 0;
+
+        }
+      }
+      span{
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+    }
   }
 
   .wrapper-box{

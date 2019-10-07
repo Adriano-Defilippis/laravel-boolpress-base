@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Category;
 
 class PostController extends Controller
 {
@@ -15,10 +16,12 @@ class PostController extends Controller
     public function index()
     {
         // $posts = Post::all();
-        $posts = Post::orderBy('updated_at', 'ASC')->take(5)
+        $categories = Category::all();
+        $posts = Post::orderBy('updated_at', 'ASC')
+                  ->take(5)
                   -> get();
         $type_view = "All Posts";
-        return view('page.post_index', compact('posts', 'type_view'));
+        return view('page.post_index', compact('categories','posts', 'type_view'));
     }
 
     /**

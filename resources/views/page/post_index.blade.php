@@ -3,9 +3,17 @@
 
 <aside class="">
   <a href="#">NEW POST</a>
+  <nav>
+    <span>Categories Post</span>
+    <ul>
+      @foreach ($categories as $category)
+        <li><a href="#">{{ $category -> name }}</a></li>
+      @endforeach
+    </ul>
+  </nav>
+
 </aside>
   <div class="wrapper-box">
-
 
 
   @foreach ($posts as $post)

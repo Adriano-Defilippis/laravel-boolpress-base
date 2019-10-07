@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Nunito;
+  list-style: none;
 }
 
 header {
@@ -15,7 +16,7 @@ header {
 .container {
   display: flex;
   width: 100%;
-  height: calc(100% - 115px);
+  min-height: calc(100vh - 135px);
   padding: 10px;
 }
 
@@ -23,6 +24,28 @@ header {
   content: "";
   display: table;
   clear: both;
+}
+
+.container aside a {
+  text-decoration: none;
+  color: grey;
+}
+
+.container aside a:hover {
+  color: lightblue;
+}
+
+.container aside nav {
+  margin: 20px 0;
+}
+
+.container aside nav ul li {
+  margin: 10px 0;
+}
+
+.container aside nav span {
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 .container .wrapper-box {
