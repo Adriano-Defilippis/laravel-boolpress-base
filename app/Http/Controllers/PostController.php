@@ -33,7 +33,7 @@ class PostController extends Controller
     {
         $categories = Category::all();
         $type_view = 'Add New Post';
-        return view('layout.layout_form', compact('type_view', 'categories'));
+        return view('page.form_create', compact('type_view', 'categories'));
     }
 
     /**
@@ -44,7 +44,15 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request -> validate([
+          "title" => 'required',
+          "desc" => 'required',
+          "content" => 'required',
+          "author" => 'required',
+          "category_id" => 'required'
+        ]);
+
+        dd($validatedData);
     }
 
     /**
@@ -79,7 +87,11 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+
+      $post = Post::findOrFail($id);
+      $categories = Category::all();
+      $type_view = 'Edit Post';
+      return view('page.form_edit', compact('type_view', 'categories', 'post'));
     }
 
     /**
@@ -91,7 +103,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd($id);
     }
 
     /**

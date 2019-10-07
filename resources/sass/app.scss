@@ -123,7 +123,7 @@ header{
 
 form{
   width: 80%;
-  height: calc(100vh - 135px);
+  min-height: calc(100vh - 135px);
   margin: 0 auto;
 
   label{
