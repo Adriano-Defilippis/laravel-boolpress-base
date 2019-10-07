@@ -56,6 +56,12 @@ class PostController extends Controller
         //
     }
 
+    public function postsCategory($id){
+
+      dd($id);
+      return view('page.postsForCategory');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

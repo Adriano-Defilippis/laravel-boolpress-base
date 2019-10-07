@@ -7,7 +7,7 @@
     <span>Categories Post</span>
     <ul>
       @foreach ($categories as $category)
-        <li><a href="#">{{ $category -> name }}</a></li>
+        <li><a href="{{ route('showPostOfCategory', $category -> id) }}">{{ $category -> name }}</a></li>
       @endforeach
     </ul>
   </nav>

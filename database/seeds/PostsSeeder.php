@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Post;
+use App\Category;
 
 class PostsSeeder extends Seeder
 {
@@ -12,6 +13,15 @@ class PostsSeeder extends Seeder
      */
     public function run()
     {
-        factory(Post::class, 10) -> create();
+        factory(Post::class, 100)
+              -> make()
+              -> each(function($post) {
+
+            $category = Category::inRandomOrder() -> first();
+            $post -> category() -> associate($category);
+
+            $post -> save();
+
+        });
     }
 }
