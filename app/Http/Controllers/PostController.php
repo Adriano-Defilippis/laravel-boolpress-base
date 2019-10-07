@@ -14,7 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        // $posts = Post::all();
+        $posts = Post::orderBy('updated_at', 'ASC')->take(5)
+                  -> get();
         $type_view = "All Posts";
         return view('page.post_index', compact('posts', 'type_view'));
     }
