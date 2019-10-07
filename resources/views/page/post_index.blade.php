@@ -11,6 +11,7 @@
         <span>Autore del Post:</span>
         <p>{{ $post -> author }}</p>
         <div class="actions">
+          <a href="{{ route('post.showContent', $post -> id) }}">Show Content</a>
           <a href="#">EDIT</a>
           <a href="#">DELETE</a>
         </div>

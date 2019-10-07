@@ -131,7 +131,14 @@ form{
   }
   input{
     width: 100%;
-    margin-bottom: 20px;
+  }
+}
+
+.form-group{
+  margin-bottom: 20px;
+
+  button{
+    margin-top: 10px;
   }
 }
 

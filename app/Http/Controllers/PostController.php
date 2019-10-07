@@ -31,7 +31,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        $type_view = 'Add New Post';
+        return view('layout.layout_form', compact('type_view', 'categories'));
     }
 
     /**
@@ -53,7 +55,12 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $categories = Category::all();
+        $post = Post::findOrFail($id);
+
+        $type_view = "Username: " .  $post ->  author ;
+
+        return view ('page.post_content', compact('post','type_view', 'categories'));
     }
 
     public function postsCategory($id){

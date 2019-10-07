@@ -22,7 +22,7 @@
       <div class="container">
 
         <aside class="">
-          <a href="#">NEW POST</a>
+          <a href="{{ route('post.create') }}">NEW POST</a>
           <nav>
             <span>Categories Post</span>
             <ul>

@@ -8,9 +8,9 @@ use App\Post;
 
 $factory->define(Post::class, function (Faker $faker) {
     return [
-      "title" => $faker -> word,
+      "title" => $faker -> sentence(10),
       "desc" => $faker -> sentence,
-      "content" => $faker -> text,
+      "content" => $faker -> realText(800),
       "author" => $faker -> username
     ];
 });
