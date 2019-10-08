@@ -4,9 +4,9 @@ Created a example of forum/blog site, with user's posts, and possibility to get 
 CSS Compiled with SASS of Laravel mix
 ___________________________________________________________________________________________________________________
 
-Folder Project:
+Folder Project-file:
 ---------------
-Resource
+Resource/view
 _______________
 Folder Index:
 ---------------
