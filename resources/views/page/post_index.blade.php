@@ -11,9 +11,7 @@
         <span>Autore del Post:</span>
         <p>{{ $post -> author }}</p>
         <div class="actions">
-          <a href="{{ route('post.showContent', $post -> id) }}">Show Content</a>
-          <a href="{{ route('post.edit', $post -> id) }}">EDIT</a>
-          <a href="{{ route('post.destroy', $post -> id) }}">DELETE</a>
+          @include('components.link_actions')
         </div>
       </div>
     @endforeach

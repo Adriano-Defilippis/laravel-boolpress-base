@@ -17,9 +17,10 @@ class PostController extends Controller
     {
         // $posts = Post::all();
         $categories = Category::all();
-        $posts = Post::orderBy('updated_at', 'ASC')
+        $posts = Post::orderBy('updated_at', 'DESC')
                   ->take(5)
                   -> get();
+                  // dd($posts);
         $type_view = "All Posts";
         return view('page.post_index', compact('categories','posts', 'type_view'));
     }
