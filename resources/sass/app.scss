@@ -32,12 +32,14 @@ nav{
 
   padding: 0 10px;
   margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   ul{
 
     display: flex;
     justify-content: space-around;
     width: 60%;
-    float: right;
     li{
       margin: 10px 0;
 
@@ -51,7 +53,6 @@ nav{
 
 
 .container{
-  display: flex;
 
   width: 100%;
   min-height: calc(100vh - 135px);
@@ -67,7 +68,7 @@ nav{
 
   aside{
 
-
+    float: left;
   }
 
   .wrapper-box{
@@ -75,9 +76,10 @@ nav{
     flex-wrap: wrap;
     justify-content: space-between;
 
-    width: 70%;
+    width: 80%;
 
     margin: 0 auto;
+    float: right;
 
     &::after{
       content: "";
@@ -90,6 +92,7 @@ nav{
       font-size: 1.2em;
 
       width: calc(100% / 3 - 20px);
+      min-height: calc(100vh / 2.5);
       padding: 10px;
 
       margin-bottom: 10px;
@@ -100,6 +103,12 @@ nav{
       border-radius: 10px;
 
       position: relative;
+
+      &::after{
+        content: "";
+        display: table;
+        clear: both;
+      }
 
       div.actions{
         float: right;
