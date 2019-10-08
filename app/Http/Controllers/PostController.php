@@ -95,7 +95,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-
+  
       $post = Post::findOrFail($id);
       $categories = Category::all();
       $type_view = 'Edit Post';

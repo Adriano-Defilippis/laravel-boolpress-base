@@ -31,6 +31,9 @@
       <select class="" name="category_id">
         @foreach ($categories as $categoryform)
           <option value="{{ $categoryform -> id }}">{{ $categoryform -> name }}</option>
+          {{-- @if ($categoryform -> id == $)
+
+          @endif --}}
         @endforeach
       </select>
     </div>
