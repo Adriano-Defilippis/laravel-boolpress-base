@@ -5,7 +5,7 @@
   <div class="wrapper-box">
 
     @foreach ($category -> posts as $post)
-      <div actions="#"  class="box">
+      <div class="box">
         <span>Titolo Post:</span>
         <p>{{ $post -> title }}</p>
         <span>Descrizione Post:</span>

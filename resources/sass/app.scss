@@ -19,6 +19,37 @@ header{
   text-align: center;
 }
 
+a{
+  text-decoration: none;
+  color: grey;
+
+  &:hover{
+    color: lightblue;
+  }
+}
+
+nav{
+
+  padding: 0 10px;
+  margin: 20px 0;
+  ul{
+
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    float: right;
+    li{
+      margin: 10px 0;
+
+    }
+  }
+  span{
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+}
+
+
 .container{
   display: flex;
 
@@ -33,32 +64,10 @@ header{
     clear: both;
   }
 
+
   aside{
 
-    a{
-      text-decoration: none;
-      color: grey;
 
-      &:hover{
-        color: lightblue;
-      }
-    }
-
-    nav{
-
-      margin: 20px 0;
-      ul{
-
-        li{
-          margin: 10px 0;
-
-        }
-      }
-      span{
-        font-weight: bold;
-        font-size: 1.2em;
-      }
-    }
   }
 
   .wrapper-box{

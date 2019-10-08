@@ -15,22 +15,22 @@
     <body>
 
       <header>
-        <h2>Header {{ $type_view }}</h2>
+        <h2>{{ $type_view }}</h2>
       </header>
-
+      <nav>
+        <a href="{{ route('post.index') }}"><span>BOOL-FORUM</span></a>
+        <ul>
+          @foreach ($categories as $categoryy)
+            <li><a href="{{ route('showPostOfCategory', $categoryy -> id) }}">{{ $categoryy -> name }}</a></li>
+          @endforeach
+        </ul>
+      </nav>
 
       <div class="container">
 
         <aside class="">
           <a href="{{ route('post.create') }}">NEW POST</a>
-          <nav>
-            <span>Categories Post</span>
-            <ul>
-              @foreach ($categories as $categoryy)
-                <li><a href="{{ route('showPostOfCategory', $categoryy -> id) }}">{{ $categoryy -> name }}</a></li>
-              @endforeach
-            </ul>
-          </nav>
+
 
         </aside>
 

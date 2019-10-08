@@ -15,7 +15,7 @@
     <body>
 
       <header>
-        <h2>Header {{ $type_view }}</h2>
+        <h2>{{ $type_view }}</h2>
       </header>
 
 

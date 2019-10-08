@@ -13,6 +13,36 @@ header {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+a:hover {
+  color: lightblue;
+}
+
+nav {
+  padding: 0 10px;
+  margin: 20px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  float: right;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav span {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -24,28 +54,6 @@ header {
   content: "";
   display: table;
   clear: both;
-}
-
-.container aside a {
-  text-decoration: none;
-  color: grey;
-}
-
-.container aside a:hover {
-  color: lightblue;
-}
-
-.container aside nav {
-  margin: 20px 0;
-}
-
-.container aside nav ul li {
-  margin: 10px 0;
-}
-
-.container aside nav span {
-  font-weight: bold;
-  font-size: 1.2em;
 }
 
 .container .wrapper-box {

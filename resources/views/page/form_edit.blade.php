@@ -2,6 +2,7 @@
 
 @section('content')
 
+  <a href="{{ url()->previous() }}">BACK</a>
   <form class="" action="{{ route('post.update', $post -> id) }}" method="post">
     @csrf
     @method('POST')

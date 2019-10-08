@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Category;
+use App\URL;
 
 class PostController extends Controller
 {
@@ -21,7 +22,7 @@ class PostController extends Controller
                   ->take(5)
                   -> get();
                   // dd($posts);
-        $type_view = "All Posts";
+        $type_view = "Last 5 Posts";
         return view('page.post_index', compact('categories','posts', 'type_view'));
     }
 
@@ -54,6 +55,11 @@ class PostController extends Controller
         ]);
 
         $post = Post::create($validatedData);
+        // return back()->back();
+        $id_category = $validatedData["category_id"];
+
+        // return redirect()->route('category' , [$id_category]);
+        // $validatedData["category_id"]
         return redirect('/');
     }
 

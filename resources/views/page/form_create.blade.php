@@ -2,10 +2,11 @@
 
 @section('content')
 
+  <a href="{{ url()->previous() }}">BACK</a>
   <form class="" action="{{ route('post.store') }}" method="post">
     @csrf
     @method('POST')
-    
+
     <div class="form-group">
       <label for="title">Titolo</label>
       <input type="text" name="title">
