@@ -113,7 +113,8 @@ class PostController extends Controller
         ]);
 
         $editedpost = Post::whereId($id) -> update($validatedData);
-        return redirect ('/');
+        // return redirect ('/');
+        return redirect('/');
     }
 
     /**
@@ -124,6 +125,8 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::whereId($id) -> delete();
+        // return redirect('/');
+        return redirect()->back();
     }
 }
