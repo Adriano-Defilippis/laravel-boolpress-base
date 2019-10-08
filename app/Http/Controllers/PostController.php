@@ -52,7 +52,8 @@ class PostController extends Controller
           "category_id" => 'required'
         ]);
 
-        dd($validatedData);
+        $post = Post::create($validatedData);
+        return redirect('/');
     }
 
     /**

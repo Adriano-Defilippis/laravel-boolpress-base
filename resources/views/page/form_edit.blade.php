@@ -3,6 +3,8 @@
 @section('content')
 
   <form class="" action="{{ route('post.update', $post -> id) }}" method="post">
+    @csrf
+    @method('POST')
     <div class="form-group">
       <label for="title">Titolo</label>
       <input type="text" name="title" value="{{ $post -> title }}">
