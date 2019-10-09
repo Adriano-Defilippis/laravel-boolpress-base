@@ -3,7 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Post;use App\Category;
+use App\Post;
+use App\Category;
 
 class AddCatIdForeingkey extends Migration
 {
@@ -21,6 +22,20 @@ class AddCatIdForeingkey extends Migration
               -> references('id')
               -> on('categories');
      });
+
+     Schema::table('post_tag', function (Blueprint $table) {
+
+      $table -> bigInteger('post_id') -> unsigned() -> index();
+      $table -> foreign('post_id', 'post_tag_post')
+             -> references('id')
+             -> on('posts');
+
+      $table -> bigInteger('tag_id') -> unsigned() -> index();
+      $table -> foreign('tag_id', 'post_tag_tag')
+             -> references('id')
+             -> on('tags');
+    });
+
     }
 
     /**
@@ -35,5 +50,15 @@ class AddCatIdForeingkey extends Migration
         $table -> dropForeign('relationPostCategory');
         $table -> dropColumn('category_id');
       });
+
+      Schema::table('post_tag', function (Blueprint $table) {
+
+        $table -> dropForeign('post_tag_post');
+        $table -> dropColumn('post_id');
+
+        $table -> dropForeign('post_tag_tag');
+        $table -> dropColumn('tag_id');
+      });
+
     }
 }

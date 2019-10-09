@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Category;
+
 
 class Post extends Model
 {
@@ -15,8 +15,15 @@ class Post extends Model
       "category_id"
     ];
 
-    public function category() {
+
+  public function category() {
 
     return $this -> belongsTo(Category::class);
+  }
+
+
+  public function tags(){
+
+    return $this -> belongsToMany(Tag::class);
   }
 }
