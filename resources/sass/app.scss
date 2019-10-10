@@ -34,10 +34,12 @@ a{
 nav{
 
   padding: 0 10px;
-  margin: 20px 0;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  border-bottom: 4px solid lightgrey;
   ul{
 
     display: flex;
@@ -119,7 +121,7 @@ nav{
       font-size: 1.2em;
 
       width: calc(100% / 3 - 20px);
-      min-height: calc(100vh / 2.5);
+      min-height: calc(100vh / 2);
       padding: 10px;
 
       margin-bottom: 10px;
@@ -142,6 +144,10 @@ nav{
 
       float: right;
       margin-top: 20px;
+
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
 
         a{
 

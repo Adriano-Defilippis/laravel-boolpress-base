@@ -1,6 +1,9 @@
 @extends('layout.layout_index')
 @section('content')
 
+  <aside class="">
+    <a href="{{ url()->previous() }}">BACK</a>
+  </aside>
 
   <div class="wrapper-box">
     <div class="box-tag">

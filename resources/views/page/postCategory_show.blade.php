@@ -1,6 +1,9 @@
 @extends('layout.layout_index')
 @section('content')
 
+  <aside class="">
+    @include('components.aside')
+  </aside>
 
   <div class="wrapper-box">
 
