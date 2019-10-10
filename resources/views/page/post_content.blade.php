@@ -16,4 +16,19 @@
 
   </div>
 
+  <div class="wrapper-box">
+
+    <h2>Tags:</h2>
+    @foreach ($post -> tags as $tag)
+      <div class="box-tag">
+        <a href="{{ route('postsFromTag.show', $tag -> id) }}">
+          <span>#</span>
+          <p>{{ $tag -> name }}</p>
+        </a>
+      </div>
+    @endforeach
+
+
+  </div>
+
 @endsection

@@ -74,18 +74,41 @@ nav{
   .wrapper-box{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 
     width: 80%;
 
     margin: 0 auto;
-    float: right;
 
     &::after{
       content: "";
       display: table;
       clear: both;
     }
+
+    .box-tag{
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      margin-bottom: 20px;
+      a{
+        display: flex;
+
+        font-size: 1.2rem;
+
+        span{
+          font-weight: bold;
+        }
+
+        &:hover{
+          color: orange;
+        }
+      }
+    }
+
 
     .box{
 
@@ -109,6 +132,7 @@ nav{
         display: table;
         clear: both;
       }
+
 
       div.actions{
         float: right;

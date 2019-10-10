@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Category;
 use App\URL;
+use App\Tag;
 
 class PostController extends Controller
 {
@@ -87,6 +88,14 @@ class PostController extends Controller
       return view ('page.postCategory_show', compact('type_view', 'category', 'categories'));
     }
 
+    public function showPostsFromTag($id){
+
+      $tag = Tag::findOrFail($id);
+      $categories = Category::all();
+      $type_view = "Posts Relative at tag: " . $tag -> name;
+      return view ('page.postsTag', compact('tag', 'type_view', 'categories'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -95,7 +104,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-  
+
       $post = Post::findOrFail($id);
       $categories = Category::all();
       $type_view = 'Edit Post';

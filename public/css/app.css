@@ -64,16 +64,36 @@ nav span {
 .container .wrapper-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 80%;
   margin: 0 auto;
-  float: right;
 }
 
 .container .wrapper-box::after {
   content: "";
   display: table;
   clear: both;
+}
+
+.container .wrapper-box .box-tag {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.container .wrapper-box .box-tag a {
+  display: flex;
+  font-size: 1.2rem;
+}
+
+.container .wrapper-box .box-tag a span {
+  font-weight: bold;
+}
+
+.container .wrapper-box .box-tag a:hover {
+  color: orange;
 }
 
 .container .wrapper-box .box {
