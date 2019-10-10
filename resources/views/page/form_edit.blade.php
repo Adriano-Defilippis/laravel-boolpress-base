@@ -30,10 +30,14 @@
       <label for="category_id">Categoria</label><br>
       <select class="" name="category_id">
         @foreach ($categories as $categoryform)
-          <option value="{{ $categoryform -> id }}">{{ $categoryform -> name }}</option>
-          {{-- @if ($categoryform -> id == $)
+          <option value="{{ $categoryform -> id }}"
+            @if ($post -> category_id == $categoryform -> id)
+              selected
+            @endif
+            >
+            {{ $categoryform -> name }}
+          </option>
 
-          @endif --}}
         @endforeach
       </select>
     </div>
