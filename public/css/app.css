@@ -16,10 +16,11 @@ header {
 a {
   text-decoration: none;
   color: grey;
+  font-size: 1.1rem;
 }
 
 a:hover {
-  color: lightblue;
+  color: orange;
 }
 
 nav {
@@ -65,6 +66,7 @@ nav span {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: baseline;
   width: 80%;
   margin: 0 auto;
 }
@@ -79,7 +81,7 @@ nav span {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   margin-bottom: 20px;
 }
 
@@ -103,7 +105,7 @@ nav span {
   padding: 10px;
   margin-bottom: 10px;
   color: white;
-  background-color: lightblue;
+  background-color: orange;
   border-radius: 10px;
   position: relative;
 }
@@ -116,9 +118,7 @@ nav span {
 
 .container .wrapper-box .box div.actions {
   float: right;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+  margin-top: 20px;
 }
 
 .container .wrapper-box .box div.actions a {

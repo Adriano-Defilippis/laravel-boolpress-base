@@ -22,9 +22,12 @@ header{
 a{
   text-decoration: none;
   color: grey;
+  font-size: 1.1rem;
 
   &:hover{
-    color: lightblue;
+    color: orange;
+
+
   }
 }
 
@@ -75,6 +78,7 @@ nav{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: baseline;
 
     width: 80%;
 
@@ -91,7 +95,7 @@ nav{
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
+      align-items: baseline;
 
       margin-bottom: 20px;
       a{
@@ -121,7 +125,7 @@ nav{
       margin-bottom: 10px;
 
       color: white;
-      background-color: lightblue;
+      background-color: orange;
 
       border-radius: 10px;
 
@@ -135,10 +139,9 @@ nav{
 
 
       div.actions{
-        float: right;
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
+
+      float: right;
+      margin-top: 20px;
 
         a{
 
