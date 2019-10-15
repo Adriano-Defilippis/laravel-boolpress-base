@@ -12,7 +12,9 @@ class Post extends Model
       "desc",
       "content",
       "author",
-      "category_id"
+      "category_id",
+      "img",
+      "email"
     ];
 
 

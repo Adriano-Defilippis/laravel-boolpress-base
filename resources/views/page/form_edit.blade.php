@@ -3,7 +3,11 @@
 @section('content')
 
   <a href="{{ url()->previous() }}">BACK</a>
-  <form class="" action="{{ route('post.update', $post -> id) }}" method="post">
+  <form class="" action="{{ route('post.update', $post -> id) }}"
+                 method="post"
+                 accept-charset="UTF-8"
+                 enctype="multipart/form-data"
+                 >
     @csrf
     @method('POST')
     <div class="form-group">
@@ -24,6 +28,11 @@
     <div class="form-group">
       <label for="author">Autore</label>
       <input type="text" name="author" value="{{ $post -> author }}">
+    </div>
+
+    <div class="form-group">
+      <label for="img">Add IMG</label>
+      <input type="file" name="img" accept="image/*">
     </div>
 
     <div class="form-group">

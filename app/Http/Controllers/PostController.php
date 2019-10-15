@@ -125,11 +125,25 @@ class PostController extends Controller
           "desc" => 'required' ,
           "content" => 'required' ,
           "author" => 'required' ,
-          "category_id" => 'required'
+          "category_id" => 'required',
+          "img" => 'nullable|image|mimes:jpeg,jpg,png,gif,svg|max:2048'
         ]);
 
+        $file = $request -> file('img');
+
+        if ($file) {
+
+          $target_path = "img";
+          $target_file = $id . "-imgPost." . $file->getClientOriginalExtension();
+
+          $file->move($target_path, $target_file);
+
+          $validatedData['img'] = $target_file;
+
+        }
+
         $editedpost = Post::whereId($id) -> update($validatedData);
-        // return redirect ('/');
+
         return redirect('/');
     }
 
