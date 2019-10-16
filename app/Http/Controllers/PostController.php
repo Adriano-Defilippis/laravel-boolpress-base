@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use App\Mail\PostEditShip;
 use App\Post;
 use App\Category;
 use App\URL;
@@ -143,6 +146,10 @@ class PostController extends Controller
         }
 
         $editedpost = Post::whereId($id) -> update($validatedData);
+        $post = Post::findOrFail($id);
+
+        $message = "You have edited post";
+        Mail::to($post -> email)->send(new PostEditShip($post, $message));
 
         return redirect('/');
     }
